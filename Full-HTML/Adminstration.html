@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administration Dashboard</title>
+    <link rel="stylesheet" href="../Full-CSS/Adminstration.CSS" />
+  </head>
+  <body>
+    <div class="desktop-shell">
+      <div class="window-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+      </div>
+
+      <div class="desktop-content">
+        <main class="page-shell">
+          <section class="hero-section">
+            <h1>
+              <span data-i18n="welcome.line1">Welcome to</span><br />
+              <span data-i18n="welcome.line2">Administration Dashboard</span><br />
+              <span data-i18n="welcome.line3">of</span> <span class="accent">Ethio</span> <span data-i18n="welcome.line4">near me</span> .
+            </h1>
+          </section>
+
+          <section class="login-card-wrap">
+            <div class="login-card">
+              <div class="role-picker">
+                <button class="role-toggle" id="roleToggle" type="button" aria-expanded="false">
+                  <img src="../log%20in%20page/...icons/near%20me%20icon.png" alt="Location" class="role-icon" />
+                  <span id="currentRole">Owner</span>
+                </button>
+
+                <div class="role-menu" id="roleMenu" aria-label="User roles">
+                  <button type="button" class="role-option active" data-role="Owner">Owner</button>
+                  <button type="button" class="role-option" data-role="CEO">CEO</button>
+                  <button type="button" class="role-option" data-role="Admin">Admin</button>
+                  <button type="button" class="role-option" data-role="C. service">C. service</button>
+                  <button type="button" class="role-option" data-role="G. sector">G. sector</button>
+                </div>
+              </div>
+
+              <div class="login-card-inner">
+                <h2 data-i18n="login.title">Sign in</h2>
+
+                <form class="login-form" id="ownerLoginForm" novalidate>
+                  <label for="phone" data-i18n="login.phoneLabel">Phone number</label>
+                  <div class="input-box phone-box">
+                    <span class="country-code">+251</span>
+                    <input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="900000000" aria-label="Phone number" required />
+                  </div>
+
+                  <label for="password" data-i18n="login.passwordLabel">Password</label>
+                  <div class="input-box password-box">
+                    <img src="../log%20in%20page/...icons/Passward%20icon.png" alt="Password icon" class="field-icon" />
+                    <input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" aria-label="Password" required />
+                    <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password" aria-pressed="false" title="Show password">
+                      <svg class="eye-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+                      <svg class="eye-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9.9 5.2A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a16.4 16.4 0 0 1-3 3.8M6.2 6.2C3.5 8.1 2 12 2 12s3.6 7 10 7c1 0 2-.2 2.9-.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                  </div>
+
+                  <div class="forgot-row">
+                    <a href="#" data-i18n="login.forgot">Forgot password ?</a>
+                  </div>
+
+                  <button type="submit" class="signin-button" data-i18n="login.button">Sign in</button>
+                  <p class="login-feedback" id="loginFeedback" role="alert" aria-live="polite"></p>
+                </form>
+
+                <p class="signup-copy">
+                  <span data-i18n="login.signupIntro">don't have an account ?</span>
+                  <a href="#" data-i18n="login.signupLink">Sign up</a>
+                  <span data-i18n="login.signupMiddle">By Requesting</span>
+                  <span class="owner-text" data-i18n="login.signupOwner">The Owner .</span>
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="bottom-bar">
+          <div class="language-picker" id="languagePicker" aria-haspopup="true" aria-expanded="false">
+            <span id="languageFlag" class="flag-icon"></span>
+            <span id="currentLanguage">English</span>
+            <img src="../log%20in%20page/...icons/Arow%20icon.png" alt="Language menu" class="arrow-icon" />
+          </div>
+
+          <div class="language-menu" id="languageMenu" aria-label="Language selector">
+            <button type="button" class="language-option active" data-lang="en">English</button>
+            <button type="button" class="language-option" data-lang="am">አማርኛ</button>
+          </div>
+
+          <nav class="main-links" aria-label="Main navigation">
+            <a href="#" data-i18n="nav.terms">Terms</a>
+            <a href="#" data-i18n="nav.plans">Plans</a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../node_modules/i18next/i18next.min.js"></script>
+    <script src="../Full-JS/Adminstration.js"></script>
+  </body>
+</html>
